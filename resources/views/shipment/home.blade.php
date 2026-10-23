@@ -860,7 +860,7 @@
 
         /* --- Hero animated gradient & orbs --- */
         .tracking-hero {
-            background: linear-gradient(145deg, #050B18 0%, #0B1B33 35%, #122A4D 65%, #081428 100%);
+            background: linear-gradient(145deg, #0b1f17 0%, #123f2f 35%, #1d5b47 65%, #0b241d 100%);
             background-size: 300% 300% !important;
             animation: heroGradient 14s ease infinite;
         }
@@ -990,7 +990,7 @@
             display: inline-flex;
             align-items: center;
             gap: 5px;
-            background: linear-gradient(135deg, #0F1F33, #123A6B);
+            background: linear-gradient(135deg, var(--primary), #1E2924);
             color: #fff;
             font-size: .62rem;
             font-weight: 700;
