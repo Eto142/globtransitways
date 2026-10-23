@@ -29,9 +29,9 @@
             --primary-light:  #32825F;
             --navy:           #1E2924;
             --navy-mid:       #29483A;
-            --accent:         #F4A306;
-            --accent-hover:   #D88900;
-            --accent-light:   #FFD166;
+            --accent:         #1B8F52;
+            --accent-hover:   #14563F;
+            --accent-light:   #A9D9B8;
             --white:          #FFFFFF;
             --off-white:      #F4F7F5;
             --light-gray:     #E8EEEA;
@@ -108,7 +108,7 @@
             position: relative;
             border: 1px solid rgba(255,255,255,.24);
             border-radius: 50%;
-            color: #f4a306;
+            color: var(--accent);
         }
         .preloader-route::before,
         .preloader-route::after {
@@ -151,9 +151,9 @@
             height: 100%;
             width: 0%;
             border-radius: inherit;
-            background: linear-gradient(90deg, #35a878, #f4a306);
+            background: linear-gradient(90deg, #35a878, var(--accent));
             transition: width .25s ease;
-            box-shadow: 0 0 18px rgba(244,163,6,.3);
+            box-shadow: 0 0 18px rgba(27,143,82,.3);
         }
         .preloader-dots {
             display: flex;
@@ -831,7 +831,7 @@
         /* --- Topbar accent bar --- */
         .topbar-accent-bar {
             height: 3px;
-            background: linear-gradient(90deg, #176B4D, #F4A306, #176B4D);
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary));
             background-size: 200% auto;
             animation: shimmer 3.5s linear infinite;
         }
@@ -854,7 +854,7 @@
             color: #55637A;
             font-weight: 500;
         }
-        .topbar-contact-item i { color: #F4A306; }
+        .topbar-contact-item i { color: var(--accent); }
         .topbar-contact-item a { color: #55637A; text-decoration: none; }
         .topbar-contact-item a:hover { color: #176B4D; }
 
@@ -873,7 +873,7 @@
         }
         .hero-orb-1 {
             width: 520px; height: 520px;
-            background: radial-gradient(circle, rgba(255,140,0,.14) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(27,143,82,.18) 0%, transparent 70%);
             top: -220px; right: -80px;
             animation: floatOrb 7s ease-in-out infinite;
         }
@@ -887,17 +887,17 @@
         .hero-live-dot {
             width: 8px; height: 8px;
             border-radius: 50%;
-            background: #FFD166;
+            background: var(--accent-light);
             display: inline-block;
             animation: pulseDot 1.4s infinite;
         }
 
         /* --- Copy button --- */
         .copy-btn {
-            background: rgba(255,140,0,.2);
-            border: 1px solid rgba(255,140,0,.38);
+            background: rgba(27,143,82,.2);
+            border: 1px solid rgba(27,143,82,.38);
             cursor: pointer;
-            color: #FFD166;
+            color: var(--accent-light);
             padding: 5px 12px;
             border-radius: 6px;
             transition: all .3s ease;
@@ -909,7 +909,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        .copy-btn:hover { background: rgba(255,140,0,.35); transform: scale(1.06); }
+        .copy-btn:hover { background: rgba(27,143,82,.35); transform: scale(1.06); }
 
         /* --- Status step tracker --- */
         .status-steps {
@@ -938,7 +938,7 @@
             z-index: 0;
         }
         .step-item.done:not(:last-child)::after {
-            background: linear-gradient(90deg, #F4A306, rgba(255,255,255,.2));
+            background: linear-gradient(90deg, var(--accent), rgba(255,255,255,.2));
         }
         .step-dot {
             width: 36px; height: 36px;
@@ -952,10 +952,10 @@
             transition: all .3s ease;
         }
         .step-item.done .step-dot {
-            background: #F4A306;
-            border-color: #F4A306;
+            background: var(--accent);
+            border-color: var(--accent);
             color: #fff;
-            box-shadow: 0 0 18px rgba(255,140,0,.55);
+            box-shadow: 0 0 18px rgba(27,143,82,.55);
         }
         .step-item.current .step-dot {
             background: #fff;
@@ -976,7 +976,7 @@
         }
         .step-item.done .step-label,
         .step-item.current .step-label { color: rgba(255,255,255,.82); }
-        .step-item.current .step-label { color: #FFD166; }
+        .step-item.current .step-label { color: var(--accent-light); }
 
         /* --- Timeline enhancements --- */
         .timeline-item:first-child .timeline-dot {
@@ -984,7 +984,7 @@
         }
         .timeline-dot.dot-delivered { background: linear-gradient(135deg,#1B8F52,#16A34A); box-shadow:0 3px 12px rgba(22,163,74,.3); animation:none; }
         .timeline-dot.dot-transit   { background: linear-gradient(135deg,#32825F,#176B4D); box-shadow:0 3px 12px rgba(23,107,77,.35); animation:none; }
-        .timeline-dot.dot-pending   { background: linear-gradient(135deg,#D97706,#F59E0B); box-shadow:0 3px 12px rgba(217,119,6,.35); animation:none; }
+        .timeline-dot.dot-pending   { background: linear-gradient(135deg,#14563F,#1B8F52); box-shadow:0 3px 12px rgba(20,86,63,.35); animation:none; }
 
         .current-badge {
             display: inline-flex;
@@ -1004,7 +1004,7 @@
         .current-badge .live-dot {
             width: 6px; height: 6px;
             border-radius: 50%;
-            background: #FFD166;
+            background: var(--accent-light);
             animation: pulseDot 1.2s infinite;
         }
         .timeline-content:hover { box-shadow: 0 4px 20px rgba(20,86,63,.10); }
@@ -1057,7 +1057,7 @@
             padding: 2px 6px;
         }
         .route-connector-line { flex: 1; border-top: 2px dashed #DCE5DF; }
-        .route-connector-icon { color: #F4A306; font-size: .9rem; }
+        .route-connector-icon { color: var(--accent); font-size: .9rem; }
         .route-wrap + .route-wrap { border-top: 1px dashed #DCE5DF; }
 
         /* --- Scroll-reveal --- */
@@ -1122,7 +1122,7 @@
             position: absolute;
             top: 0; left: 0; right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #176B4D, #F4A306, #176B4D);
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary));
             background-size: 200% auto;
             animation: shimmer 4s linear infinite;
         }
@@ -1136,7 +1136,7 @@
             content: '';
             flex: 1;
             height: 1px;
-            background: linear-gradient(90deg, #F4A306, transparent);
+            background: linear-gradient(90deg, var(--accent), transparent);
             margin-left: 4px;
         }
         .footer-social {
@@ -1156,8 +1156,8 @@
             transition: all .3s ease;
         }
         .footer-social a:hover {
-            background: #F4A306;
-            border-color: #F4A306;
+            background: var(--accent);
+            border-color: var(--accent);
             color: #fff;
             transform: translateY(-3px);
         }
@@ -1224,7 +1224,7 @@
 <div id="shipment-preloader" class="shipment-preloader" aria-live="polite">
     <div class="preloader-card">
         <div class="preloader-route" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 17.5h2m14 0h2M7 17.5h10M5 17.5V8.8c0-.99.81-1.8 1.8-1.8h8.4c.99 0 1.8.81 1.8 1.8v8.7M17 11h2.1l2.4 2.8v3.7h-2.2M5 13h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7.5" cy="17.5" r="1.5" fill="#f4a306"/><circle cx="17.5" cy="17.5" r="1.5" fill="#f4a306"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 17.5h2m14 0h2M7 17.5h10M5 17.5V8.8c0-.99.81-1.8 1.8-1.8h8.4c.99 0 1.8.81 1.8 1.8v8.7M17 11h2.1l2.4 2.8v3.7h-2.2M5 13h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7.5" cy="17.5" r="1.5" fill="#1B8F52"/><circle cx="17.5" cy="17.5" r="1.5" fill="#1B8F52"/></svg>
         </div>
         <div class="preloader-logo">
             <img src="{{ asset('assets/images/logo.png') }}" alt="globtransitways">
@@ -1286,7 +1286,7 @@
         <div class="tracking-strip">
             <i class="fas fa-barcode" style="color:var(--accent-light); font-size:1.1rem;"></i>
             <span style="font-size:.74rem; text-transform:uppercase; letter-spacing:1.5px; color:rgba(255,255,255,.55); font-weight:600;">Tracking ID</span>
-            <strong style="font-family:'Rajdhani',sans-serif; font-size:1.3rem; letter-spacing:2px; background:linear-gradient(135deg,#fff 20%,#FFD166 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">{{ $shipment->tracking_number }}</strong>
+            <strong style="font-family:'Rajdhani',sans-serif; font-size:1.3rem; letter-spacing:2px; background:linear-gradient(135deg,#fff 20%,var(--accent-light) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">{{ $shipment->tracking_number }}</strong>
             <button class="copy-btn" id="copy-tracking-btn" title="Copy tracking number">
                 <i class="fas fa-copy"></i> Copy
             </button>
