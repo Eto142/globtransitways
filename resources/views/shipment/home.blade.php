@@ -1244,7 +1244,7 @@
     <div class="container">
         <div class="track-topbar-inner">
             <a href="{{ url('/') }}" class="track-logo" aria-label="globtransitways Home">
-                <img src="{{ asset('wp-content/uploads/2022/04/Screenshot_20231009_092214.png') }}"
+                <img src="{{ asset('wp-content/uploads/2022/04/logo.png') }}"
                      alt="globtransitways Company Limited">
             </a>
             <div class="topbar-contact">
